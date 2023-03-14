@@ -1,2 +1,2 @@
 #!/bin/bash
-perl -le print if $. % 2 == 1
+perl -le 'print if $. % 2 == 1'
