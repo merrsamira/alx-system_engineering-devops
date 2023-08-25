@@ -1,10 +1,10 @@
-*Description*
+*Description*\n
 This is a simple web infrastructure that hosts a website that is reachable via www.foobar.com. There are no firewalls or SSL certificates for protecting the server's network. Each component (database, application server) has to share the resources (CPU, RAM, and SSD) provided by the server.
 
-*Specifics About This Infrastructure*
-What a server is.
+*Specifics About This Infrastructure*\n
+What a server is.\n
 A server is a computer hardware or software that provides services to other computers, which are usually referred to as clients.
-
+\n
 The role of the domain name.
 To provide a human-friendly alias for an IP Address. For example, the domain name www.wikipedia.org is easier to recognize and remember than 91.198.174.192. The IP address and domain name alias is mapped in the Domain Name System (DNS)
 
