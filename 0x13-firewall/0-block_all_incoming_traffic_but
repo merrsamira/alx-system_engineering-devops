@@ -6,3 +6,4 @@ sudo ufw default allow outgoing -y
 sudo ufw allow 22/tcp
 sudo ufw allow 443/tcp
 sudo ufw allow 80/tcp
+nmap -p 22,80,443 54.157.146.198
