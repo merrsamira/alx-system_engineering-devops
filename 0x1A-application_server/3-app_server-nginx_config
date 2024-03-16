@@ -46,7 +46,7 @@ server {
         # Using IP of server as domain name
         server_name 35.153.66.9;
         add_header X-Served-By '408984-web-01';
-        rewrite ^/redirect_me https://www.github.com/nadiaMahfoud permanent;
+        rewrite ^/redirect_me https://www.github.com/merrsamira permanent;
 
         location / {
                 # First attempt to serve request as file, then
@@ -87,7 +87,7 @@ server {
     }
 
     location /redirect_me {
-        return 301 http://github.com/nadiaMahfoud;
+        return 301 http://github.com/merrsamira;
     }
 
     error_page 404 /404.html;

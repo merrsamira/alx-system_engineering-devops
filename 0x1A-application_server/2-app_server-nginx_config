@@ -43,29 +43,27 @@ server {
         # Add index.php to the list if you are using PHP
         index index.html index.htm index.nginx-debian.html;
 
-        # Using IP of server as domain name
-        server_name 35.153.66.9;
-        add_header X-Served-By '408984-web-01';
-        rewrite ^/redirect_me https://www.github.com/nadiaMahfoud permanent;
+         server_name _;
+        server_name 54.236.16.80;
+        add_header X-Served-By '378799-web-01';
+        rewrite ^/redirect_me https://www.github.com/merrsamira permanent;
+
 
         location / {
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
                 try_files $uri $uri/ =404;
         }
-
-        location /airbnb-onepage/ {
+location /airbnb-onepage/ {
                 include proxy_params;
                 proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
         }
-
-
         # pass PHP scripts to FastCGI server
         #
         #location ~ \.php$ {
         #       include snippets/fastcgi-php.conf;
         #
-        # With php-fpm (or other unix sockets):
+        #       # With php-fpm (or other unix sockets):
         #       fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
         #       # With php-cgi (or other tcp sockets):
         #       fastcgi_pass 127.0.0.1:9000;
@@ -77,24 +75,21 @@ server {
         #location ~ /\.ht {
         #       deny all;
         #}
-
-        location /hbnb_static {
+        #
+         location /hbnb_static {
         alias /data/web_static/current;
         index index.html index.htm;
     }
-
-    location /redirect_me {
-        return 301 http://github.com/nadiaMahfoud;
+        location /redirect_me {
+        return 301 http://github.com/merrsamira;
     }
 
-    error_page 404 /404.html;
+         error_page 404 /404.html;
     location /404 {
       root /var/www/html;
       internal;
-      }
 }
-
-
+}
 
 # Virtual Host configuration for example.com
 #
