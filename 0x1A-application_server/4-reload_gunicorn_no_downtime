@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
-# Reloading Gunicorn in a graceful way
+# Redémarrage gracieux de Gunicorn
 
-#pkill -HUP -f gunicorn
-pgrep gunicorn | xargs kill -HUP
+# Trouver le PID de Gunicorn
+pid=$(pgrep gunicorn)
+
+# Si le PID est trouvé, redémarrez Gunicorn de manière gracieuse
+if [ -n "$pid" ]; then
+    echo "Redémarrage gracieux de Gunicorn..."
+    kill -HUP "$pid"
+    echo "Gunicorn redémarré avec succès."
+else
+    echo "Aucun processus Gunicorn en cours d'exécution."
+fi
