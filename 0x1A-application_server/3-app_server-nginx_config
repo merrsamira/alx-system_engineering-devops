@@ -44,7 +44,7 @@ server {
         index index.html index.htm index.nginx-debian.html;
 
         # Using IP of server as domain name
-        server_name 35.153.66.9;
+        server_name 54.236.16.80;
         add_header X-Served-By '408984-web-01';
         rewrite ^/redirect_me https://www.github.com/merrsamira permanent;
 
