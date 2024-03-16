@@ -17,7 +17,7 @@ server {
         }
 
         # 0x1A-application_server - 4-app_server-nginx_config
-        location / {
+        location // {
                 proxy_pass http://127.0.0.1:5003/2-hbnb;
         }
 
